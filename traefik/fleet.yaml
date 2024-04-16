@@ -4,7 +4,7 @@ helm:
   chart: traefik
   repo: https://traefik.github.io/charts
   values:
+    installCRDs: true
     ingressClass:
       name: my-traefik
-      isDefault: false
-      installCRDs: true
+      isDefault: false 
