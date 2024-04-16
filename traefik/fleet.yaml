@@ -1,5 +1,10 @@
-defaultNamespace: kube-system
+defaultNamespace: traefik-system
 helm:
   releaseName: traefik
   chart: traefik
   repo: https://traefik.github.io/charts
+  values:
+    ingressClass:
+      name: my-traefik
+      isDefault: false
+      installCRDs: true
