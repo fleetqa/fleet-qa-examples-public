@@ -1,0 +1,21 @@
+defaultNamespace: fleet-nginx-github
+# This is new feature from 2.8.3
+targetCustomizations:
+- name: production
+  # first cluster
+  clusterSelector:
+    matchLabels:
+      environment: prod
+  correctDrift:
+    enabled: true
+    force: true
+    keepFailHistory: true
+- name: development
+  # second cluster
+  clusterSelector:
+    matchLabels:
+      environment: dev
+  correctDrift:
+    enabled: false
+    force: false
+    keepFailHistory: false
