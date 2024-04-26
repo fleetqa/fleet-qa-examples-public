@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fleet-nginx
+    env: private
+  name: fleet-nginx-private
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fleet-nginx-private
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fleet-nginx-private
+    spec:
+      containers:
+      - image: nginx:alpine
+        name: nginx
+        ports:
+        - containerPort: 80
