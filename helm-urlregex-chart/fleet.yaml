@@ -1,0 +1,5 @@
+helm:
+  releaseName: local-chart
+  chart: "http://nginx-service.default.svc.cluster.local/app-0.1.0.tgz"
+  values:
+    foo: bar
