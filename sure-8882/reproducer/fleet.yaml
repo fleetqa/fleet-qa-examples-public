@@ -1,0 +1,2 @@
+ helm
+     chart: git::ssh://git@github.com:fleetqa/fleet-qa-examples.git//helmchart-configmap?ref=main
