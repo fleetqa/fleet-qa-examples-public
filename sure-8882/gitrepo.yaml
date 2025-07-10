@@ -1,0 +1,11 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: sure-8882
+  namespace: fleet-local
+spec:
+  repo: git@github.com:fleetqa/fleet-qa-examples-public.git
+  branch: master
+  paths:
+    - sure-8882/reproducer
+  clientSecretName: ssh
