@@ -1,0 +1,7 @@
+# Root bundle - no dependencies
+# This bundle will be modified manually to trigger Modified state
+defaultNamespace: depends-on-accepted-states-root
+
+labels:
+  role: root-modified
+  test: accepted-states
