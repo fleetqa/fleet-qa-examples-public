@@ -13,5 +13,5 @@ dependsOn:
     # Accept both Ready and Modified states
     # This allows the leaf to deploy even when root has drifted
     acceptedStates:
-      - Error
+      - Active
       - Modified
