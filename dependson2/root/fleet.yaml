@@ -1,0 +1,7 @@
+# Root bundle - automatically transitions to Modified state
+# A Job patches the ConfigMap after deployment, causing drift
+defaultNamespace: depends-on-accepted-states-root
+
+labels:
+  role: root-modified
+  test: accepted-states

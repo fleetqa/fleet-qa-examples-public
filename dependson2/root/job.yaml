@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: configmap-patcher
+spec:
+  backoffLimit: 3
+  template:
+    spec:
+      serviceAccountName: configmap-patcher
+      restartPolicy: Never
+      containers:
+        - name: kubectl
+          image: rancher/kubectl:v1.28.5
+          command:
+            - /bin/sh
+            - -c
+            - |
+              sleep 5
+              kubectl patch configmap app-config --type merge -p '{"data":{"status":"modified-by-job","drift":"true"}}'
+              echo "ConfigMap patched successfully - drift created"
