@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  key: "root-value"
+  key: "root-value-1"
   info: "Modify this to trigger Modified state"
