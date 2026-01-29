@@ -14,4 +14,4 @@ dependsOn:
     # This allows the leaf to deploy even when root has drifted
     acceptedStates:
       - Ready
-      - Modified
+      - Error
