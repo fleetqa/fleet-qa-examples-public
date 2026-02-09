@@ -14,4 +14,5 @@ dependsOn:
     # This allows the leaf to deploy even when root has drifted
     acceptedStates:
     - OutOfSync
+    - BadState
 
