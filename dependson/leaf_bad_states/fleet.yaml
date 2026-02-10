@@ -1,0 +1,17 @@
+# Leaf bundle - depends on root with acceptedStates
+# This bundle will deploy even if root is in Modified state
+defaultNamespace: depends-on-accepted-states-leaf
+
+labels:
+  role: leaf-accepted-states
+  test: accepted-states
+
+dependsOn:
+  - selector:
+      matchLabels:
+        role: root-modified
+    # Accept both Ready and Modified states
+    # This allows the leaf to deploy even when root has drifted
+    acceptedStates:
+    - BadState
+
